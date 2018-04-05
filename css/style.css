@@ -53,15 +53,18 @@ body{
     top:40%;
     left:50%;
     padding :10px;
-    border:5px white solid;
+     border:5px white solid;
     transform: translate(-50%,-50%);
     text-align: center;
+    /* animation: moveInBorder 1s 2s; */
+   
 
 }
 
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
+    backface-visibility: hidden;
 
 }
 
@@ -70,6 +73,8 @@ body{
     font-weight: 400;
     font-size: 60px;
     letter-spacing: 35px;
+    animation: moveInLeft 2s ease-out;
+    
 
 }
 .heading-primary-sub{
@@ -77,4 +82,36 @@ body{
     font-weight: 700;
     font-size: 20px;
     letter-spacing: 17.4px;
+    animation: moveInRight 2s ease-out;
 }
+
+@keyframes moveInLeft{
+
+    0% {
+        opacity:0;
+        transform: translateX(-100%);
+    }
+    80% {
+        transform: translateX(10%);
+    }
+    100% {
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight{
+
+    0% {
+        opacity:0;
+        transform: translateX(+100%);
+    }
+    80% {
+        transform: translateX(-10%);
+    }
+    100% {
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
