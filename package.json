@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "SASS DEMO PROJEC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravraw/natours.git"
+  },
+  "author": "RAVRAW",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravraw/natours/issues"
+  },
+  "homepage": "https://github.com/ravraw/natours#readme",
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  },
+  "dependencies": {}
+}
