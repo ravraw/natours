@@ -1,0 +1,43 @@
+
+body{
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    font-size: 1.6px;
+    color:$color-gary-dark;
+    line-height: 1.7;
+    padding:3rem;
+}
+
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main{
+        display: block;
+        font-weight: 400;
+        font-size: 6rem;
+        letter-spacing: 3.5rem;
+        animation: moveInLeft 2s ease-in-out;
+    }
+    &--sub{
+        display: block;
+        font-weight: 700;
+        font-size: 2rem;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 2s ease-in-out;
+    }
+}
+
+%btn-linked-visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 2rem;
+    display:inline-block;
+    border-radius: 10rem;
+    position: relative;
+    transition: all .2s;
+    font-size: 1.6rem;
+}
+
