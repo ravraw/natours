@@ -76,6 +76,7 @@ body {
   text-transform: uppercase;
   font-size: 3.5rem;
   font-weight: 700;
+  margin-bottom: 6rem;
   background-image: linear-gradient(to right, red, #28b485);
   background-clip: text;
   -webkit-background-clip: text;
@@ -165,6 +166,34 @@ body {
 .btn-text:active {
   transform: translateY(-3px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+
+.composition {
+  position: relative;
+  transition: all, 0.2s; }
+  .composition__photo {
+    width: 65%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all, 0.2s;
+    outline-offset: 1rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1rem solid #55c57a;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.4);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
 
 .header {
   position: relative;
