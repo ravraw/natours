@@ -1,51 +1,78 @@
-
 .btn {
-    &:link{
-        @extend %btn-linked-visited;
-    }
-    &:visited{
-        @extend %btn-linked-visited;
-    }
-    
-    &:hover{
-        transform: translateY(-5px);
-        box-shadow: 0 1rem 2rem rgba($color-black,0.6);
+  &:link {
+    @extend %btn-linked-visited;
+  }
+  &:visited {
+    @extend %btn-linked-visited;
+  }
 
-        &::after{
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity:0;
-        }
-    }
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.6);
 
-    &:active{
-        transform: translateY(-3px);
-        box-shadow: 0 .5rem 1rem rgba($color-black,0.3);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
     }
+  }
 
-    &--white{
-        background-color: $color-white;
-        color:$color-gary-dark;
-    
-        &::after{
-            background-color: $color-white;
-        }
-    }
+  &:active {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.3);
+  }
 
-    &::after{
-        content: "";
-        display:inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 100px;
-        position: absolute;
-        top:0;
-        left:0;
-        z-index: -1;
-        transition: all .4s;
-    }
+  &--white {
+    background-color: $color-white;
+    color: $color-gray-dark;
 
-    &--animated{
-        animation: moveInBottom 1s ease-out .75s ;
-        animation-fill-mode:backwards;
+    &::after {
+      background-color: $color-white;
     }
-}    
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInBottom 1s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    display: inline-block;
+    color: $color-primary;
+    text-decoration: none;
+    padding: 3px;
+    border-bottom: 1px $color-primary solid;
+  }
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.6);
+    transition: all, 0.5s;
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.3);
+  }
+}

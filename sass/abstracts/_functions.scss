@@ -1,0 +1,24 @@
+@function col-size($col-used, $col-total) {
+  @if $col-used > 1 {
+    @return calc(
+      ((100% - (#{$col-total} - 1) * #{$gutter-horizontal}) / #{$col-total}) * #{$col-used} +
+        ((#{$col-used} - 1) * #{$gutter-horizontal})
+    );
+  } @else {
+    @return calc(
+      (100% - (#{$col-total} - 1) * #{$gutter-horizontal}) / #{$col-total}
+    );
+  }
+}
+
+// // width = (100% - (gutter * (total-col) - 1) / total-col )  * toal-col;
+
+// @function col-size ($col-used,$col-total){
+//     @return calc(
+//         (   100%
+//             - ( #{$gutter-horizontal} * ($col-total - 1 ))
+//             / $col-total
+//         )
+//             * $col-used + (#{$gutter-horizontal} * ($col-used - 1))
+//         );
+// }
