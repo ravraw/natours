@@ -1,5 +1,38 @@
-.section-about{
-    background:$color-gray-light-1;
-    padding:25rem;
-    margin-top: -20vh;
+.section-about {
+  background: $color-gray-light-1;
+  padding: 25rem;
+  margin-top: -20vh;
+}
+.section-features {
+  padding: 20rem 0;
+  // background-image: linear-gradient(
+  //     to right,
+  //     rgba($color-primary-light, 0.52),
+  //     rgba($color-primary-dark, 0.52)
+  //   ),
+  //   url(../img/nat-4.jpg);
+  // background-size: cover;
+  position: relative;
+  transform: skewY(-6deg) translateY(-10rem);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.801),
+        rgba($color-primary-dark, 0.801)
+      ),
+      url(../img/nat-4.jpg);
+    background-size: cover;
+    z-index: -1; // pull behind feature boxes
+  }
+
+  & > * {
+    transform: skewY(6deg);
+  }
 }
