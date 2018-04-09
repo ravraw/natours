@@ -167,6 +167,15 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem; }
+  .card--side {
+    color: white;
+    font-size: 4rem;
+    background-color: orangered;
+    height: 50rem; }
+
 .composition {
   position: relative;
   transition: all, 0.2s; }
@@ -286,3 +295,8 @@ body {
     z-index: -1; }
   .section-features > * {
     transform: skewY(6deg); }
+
+.section-tours {
+  background: #f7f7f7;
+  padding: 25rem 0 50rem 0;
+  margin-top: -18rem; }

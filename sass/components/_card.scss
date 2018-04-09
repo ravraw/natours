@@ -1,0 +1,11 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  &--side {
+    color: white;
+    font-size: 4rem;
+    background-color: orangered;
+    height: 50rem;
+  }
+}
