@@ -2,10 +2,22 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
 
-  &--side {
+  &__side {
     color: white;
     font-size: 4rem;
-    background-color: orangered;
     height: 50rem;
+    transition: all, 0.8s;
+  }
+
+  &__side--front {
+    background-color: red;
+  }
+  &__side--back {
+    background-color: green;
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side {
+    transform: rotateY(180deg);
   }
 }

@@ -170,11 +170,18 @@ body {
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem; }
-  .card--side {
+  .card__side {
     color: white;
     font-size: 4rem;
-    background-color: orangered;
-    height: 50rem; }
+    height: 50rem;
+    transition: all, 0.8s; }
+  .card__side--front {
+    background-color: red; }
+  .card__side--back {
+    background-color: green;
+    transform: rotateY(180deg); }
+  .card:hover .card__side {
+    transform: rotateY(180deg); }
 
 .composition {
   position: relative;
