@@ -3,21 +3,25 @@
   -moz-perspective: 150rem;
 
   &__side {
+    background-color: red;
     color: white;
     font-size: 4rem;
     height: 50rem;
     transition: all, 0.8s;
+
+    &__side--front {
+      background-color: red;
+    }
+    &__side--back {
+      background-color: green;
+      transform: rotateY(180deg);
+    }
   }
 
-  &__side--front {
-    background-color: red;
-  }
-  &__side--back {
-    background-color: green;
+  &:hover &__side--front {
     transform: rotateY(180deg);
   }
-
-  &:hover &__side {
-    transform: rotateY(180deg);
+  &:hover &__side--back {
+    transform: rotateY(0deg);
   }
 }
