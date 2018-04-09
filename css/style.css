@@ -112,6 +112,12 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
+.u-margin-top-huge {
+  margin-top: 12rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
+
 .btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6); }
@@ -128,6 +134,12 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: #fff; }
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #55c57a; }
 
 .btn::after {
   content: "";
@@ -169,22 +181,96 @@ body {
 
 .card {
   perspective: 150rem;
-  -moz-perspective: 150rem; }
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem; }
   .card__side {
-    background-color: red;
-    color: white;
-    font-size: 4rem;
-    height: 50rem;
-    transition: all, 0.8s; }
-    .card__side__side--front {
-      background-color: red; }
-    .card__side__side--back {
-      background-color: green;
+    height: 52rem;
+    transition: all, 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0rem 2rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
       transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #51ff00, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    height: 40%;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    .card__picture-1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg"); }
+    .card__picture-2 {
+      background-image: linear-gradient(to right bottom, #51ff00, #28b485), url("../img/nat-6.jpg"); }
+    .card__picture-3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-7.jpg"); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: right;
+    position: absolute;
+    top: 10rem;
+    right: 2rem;
+    width: 75%;
+    z-index: 10; }
+  .card__heading__span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading__span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+    .card__heading__span--2 {
+      background-image: linear-gradient(to right bottom, rgba(81, 255, 0, 0.8), rgba(40, 180, 133, 0.8)); }
+    .card__heading__span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      margin: auto;
+      width: 80%;
+      list-style: none; }
+      .card__details ul li {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 2rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .composition {
   position: relative;
@@ -241,6 +327,7 @@ body {
   background-image: linear-gradient(to right, rgba(81, 255, 0, 0.52), rgba(40, 180, 133, 0.52)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
   .header__logo-box {
     position: absolute;
@@ -308,5 +395,5 @@ body {
 
 .section-tours {
   background: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -18rem; }
