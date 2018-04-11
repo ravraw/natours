@@ -1,12 +1,46 @@
+/*
+MEDIA MANAGER
+
+0 - 600 : PHONE
+600 - 900 : TABLET - PORTRAIT
+900 - 1200 : TABLET - LANDSCAPE 
+1200 - 1800 : DESKTOP - IS WHERE OUR NORMAL STYLE APPLIES
+18000 +  : BIG DESKTOPS 
+*/
+/*
+Break-points choices:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+1em = 16px
+
+*/
 *,
 *::after,
 *::before {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+  padding: 0; }
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.5%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 @keyframes moveInLeft {
   0% {
@@ -41,8 +75,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   color: #777;
-  line-height: 1.7;
-  padding: 3rem; }
+  line-height: 1.7; }
 
 .heading-primary {
   color: #fff;
@@ -55,12 +88,20 @@ body {
     font-size: 6rem;
     letter-spacing: 3.5rem;
     animation: moveInLeft 2s ease-in-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-weight: 700;
     font-size: 2rem;
     letter-spacing: 1.75rem;
     animation: moveInRight 2s ease-in-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.5rem;
+        font-weight: 400; } }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -83,6 +124,15 @@ body {
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all, 0.2s; }
+  @media (max-width: 75em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2.75rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -572,8 +622,8 @@ body {
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
-  top: -5rem;
-  right: -5rem;
+  top: 8.5rem;
+  right: 6.5rem;
   position: fixed;
   z-index: 1000;
   background-image: radial-gradient(#55c57a 20%, #28b485 33%);
@@ -731,7 +781,7 @@ body {
 
 .section-about {
   background: #f7f7f7;
-  padding: 25rem;
+  padding: 15rem;
   margin-top: -20vh; }
 
 .section-features {
