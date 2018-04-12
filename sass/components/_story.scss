@@ -10,6 +10,17 @@
   transform: skewX(-12deg);
   transition: all, 1s;
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 4rem;
+    transform: skewX(0deg);
+  }
+
+  @include respond(phone) {
+    transform: skewX(0deg);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -21,6 +32,14 @@
     position: relative;
     transform: translateX(-3rem) skewX(12deg);
     transition: all, 1s;
+
+    @include respond(tab-port) {
+      transform: translateX(-3rem) skewX(0deg);
+    }
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0deg);
+    }
   }
 
   &__image {
@@ -31,6 +50,13 @@
 
   &__text {
     transform: skewX(12deg);
+    @include respond(tab-port) {
+      transform: skewX(0deg);
+    }
+
+    @include respond(phone) {
+      transform: skewX(0deg);
+    }
   }
 
   &__caption {
